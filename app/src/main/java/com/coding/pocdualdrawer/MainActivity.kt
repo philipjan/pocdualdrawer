@@ -22,5 +22,8 @@ class MainActivity : AppCompatActivity() {
         binder.rightBtn.setOnClickListener {
             binder.drawer.openDrawer(binder.rightNav)
         }
+        binder.toolBar.setNavigationOnClickListener {
+            binder.drawer.openDrawer(binder.leftNav)
+        }
     }
 }
