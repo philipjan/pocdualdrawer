@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer">
+
+    <LinearLayout
+        android:id="@+id/parentConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/leftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Left"/>
+
+        <Button
+            android:id="@+id/rightBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Right"/>
+
+    </LinearLayout>
+
+   <com.google.android.material.navigation.NavigationView
+       android:id="@+id/leftNav"
+       android:layout_width="200dp"
+       android:layout_height="match_parent"
+       android:backgroundTint="@color/colorAccent"
+       android:layout_gravity="start"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/rightNav"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="@android:color/background_dark"
+        android:layout_gravity="end"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
